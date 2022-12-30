@@ -5,7 +5,7 @@ import Row from '../Components/Row'
 
 function Homescreen() {
   return (
-    <div>
+    <div className="bg-[url('https://wallpaperaccess.com/full/1223720.jpg')] bg-cove">
         <Navbar />
         <Banner />
         <div className=' max-w-[100rem] mx-auto py-12'>
