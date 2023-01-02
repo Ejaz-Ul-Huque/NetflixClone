@@ -5,10 +5,10 @@ import Row from '../Components/Row'
 
 function Homescreen() {
   return (
-    <div >
+    <div className='bg-black' >
         <Navbar />
         <Banner />
-        <div className=' max-w-[100rem] mx-auto py-12'>
+        <div className=' max-w-[100rem] mx-auto px-6 py-12'>
         <Row title={"Netflix Orignals"}  />
         <Row title={"Trending"}  />
         <Row title={"Top Rated"}  />

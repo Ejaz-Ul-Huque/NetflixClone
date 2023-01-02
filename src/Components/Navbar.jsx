@@ -20,7 +20,7 @@ function Navbar() {
 
   return (
     <div className={` ${show ? "fixed":"relative"} w-full z-50 bg-black`}>
-    <div className=' max-w-[100rem] mx-auto flex justify-between py-4 items-center'>
+    <div className=' max-w-[100rem] mx-auto flex justify-between py-4 px-6 items-center'>
         <div className=' text-red-500 font-bold text-4xl '>
             NETFLIX
         </div>

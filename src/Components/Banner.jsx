@@ -23,10 +23,10 @@ function Banner() {
 
 
   return (
-    <div className=" bgbanner bg-no-repeat bg-cover bg-center">
-      <div className="h-[450px] absolute  w-full bg-gradient-to-t from-red-500 via-transparent to-transparent " />
+    <div className=" bgbanner bg-no-repeat bg-cover bg-center "> 
+      <div className="h-[450px] absolute  w-full bg-gradient-to-t from-red-500  via-transparent to-transparent " />
       <div className=" h-[450px]  relative text-white object-contain max-w-[100rem] mx-auto">
-        <div className=" text-left pt-[140px] h-[190px]">
+        <div className=" text-left pt-[140px] h-[190px] py-6 px-6">
           <h1 className=" text-6xl  pb-2 font-black font-serif">
             Stranger Things
           </h1>

@@ -6,7 +6,7 @@ import LoginScreen from './Screen/LoginScreen';
 function App() {
   const user = true ;
   return (
-    <div className="App">
+    <div className="">
       {
           !user ? <LoginScreen /> : <Homescreen />
         }
