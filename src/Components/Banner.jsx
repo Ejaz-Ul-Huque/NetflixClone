@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
 import axios from "../axios";
+import React, { useEffect, useState } from "react";
 
 function Banner() {
   const [movies, setMovies] = useState([]);
@@ -16,12 +16,11 @@ function Banner() {
     fetchData() ;
   },[])
 
-
-
   function truncate(description , n){
     return description?.length > n ? description.substr(0,n) : description ;
 
   }
+
 
   return (
     <div className=" bgbanner bg-no-repeat bg-cover bg-center">
@@ -43,7 +42,7 @@ function Banner() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Banner
+export default Banner;
