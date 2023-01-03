@@ -1,9 +1,25 @@
-import React from 'react'
-import Banner from '../Components/Banner'
-import Navbar from '../Components/Navbar'
-import Row from '../Components/Row'
+import React from 'react';
+import { useEffect } from 'react';
+import Banner from '../Components/Banner';
+import Navbar from '../Components/Navbar';
+import Row from '../Components/Row';
+import axios from 'axios';
 
 function Homescreen() {
+
+  useEffect(()=>{
+    axios.get('/user?ID=12345')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  },[])
+  
+
   return (
     <div className='bg-black' >
         <Navbar />
