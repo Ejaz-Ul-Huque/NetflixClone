@@ -8,7 +8,7 @@ import axios from 'axios';
 function Homescreen() {
 
   useEffect(()=>{
-    axios.get('/user?ID=12345')
+    axios.get('https://api.themoviedb.org/3/movie/550?api_key=e8ab91b21b368fbc8e4eca430e357342')
   .then(function (response) {
     // handle success
     console.log(response);
