@@ -27,17 +27,14 @@ function Banner() {
 
 
   return (
-    <div style={{
-    backgroundImage: ` url('${base_url+movies?.backdrop_path}') `
-    }} className=" bg-no-repeat bg-cover bg-center">
-      <div className="h-[500px] absolute  w-full bg-gradient-to-t from-black via-transparent to-transparent " />
-      <div className=" h-[500px]  relative text-white object-contain max-w-[100rem] mx-auto">
-        <div className=" text-left pt-[140px] h-[190px]">
+    <div className=" bgbanner bg-no-repeat bg-cover bg-center "> 
+      <div className="h-[450px] absolute  w-full bg-gradient-to-t from-red-500  via-transparent to-transparent " />
+      <div className=" h-[450px]  relative text-white object-contain max-w-[100rem] mx-auto">
+        <div className=" text-left pt-[140px] h-[190px] py-6 px-6">
           <h1 className=" text-6xl  pb-2 font-black font-serif">
-            {movies?.name}
+            Stranger Things
           </h1>
-          <p>{truncate(movies?.overview , 150)
-}</p>
+          <p>Lorejbhjvghjbknljnhbgcfghgvbhjnjklnhgbjfhxv cvb,</p>
           <div className=" flex space-x-3 mt-4">
             <button className=" bg-white text-gray-700 px-6 py-1 font-bold">
               Play
