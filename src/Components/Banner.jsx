@@ -58,7 +58,7 @@ function Banner() {
     <div  style={{
           backgroundImage: ` url('${base_url+movies?.backdrop_path}') `
            }}  className="  bg-no-repeat bg-cover bg-center "> 
-      <div className="h-[450px] absolute  w-full bg-gradient-to-t from-red-500  via-transparent to-transparent " />
+      <div className="h-[450px] absolute  w-full bg-gradient-to-t from-black via-transparent to-transparent " />
       <div className=" h-[450px]  relative text-white object-contain max-w-[100rem] mx-auto">
         <div className=" text-left pt-[140px] h-[190px] py-6 px-6">
           <h1 className=" text-6xl  pb-2 font-black font-serif">
