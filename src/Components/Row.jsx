@@ -14,7 +14,8 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
   useEffect(() => {
     async function fetchData(){
       const result = await axios.get(fetchUrl) ;
-      console.log(result)
+      // console.log(result)
+      return result
     
     }
 

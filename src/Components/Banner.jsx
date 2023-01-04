@@ -1,36 +1,43 @@
 import axios from "../axios";
 import React, { useEffect, useState } from "react";
+import requests from "../Requests"
 
 function Banner() {
   const [movies, setMovies] = useState([]);
+  const base_url = "https://image.tmdb.org/t/p/original/";
 
   useEffect(()=>{
     async function fetchData(){
-      const result = await axios.get() ;
-      setMovies(
-        result [Math.floor(Math.random() * result.length -1 )]
-      )
-    
+      await axios.get(requests.fetchNetflixOriginals)
+      .then(response => {
+        setMovies(response.data.results[Math.floor(Math.random() * (response.data.results.length -1))])
+      }).catch(err => console.log(err))
+      
     }
 
     fetchData() ;
   },[])
 
   function truncate(description , n){
-    return description?.length > n ? description.substr(0,n) : description ;
+    return description?.length > n ? description.substr(0,n) +" . . ." : description ;
 
   }
 
+  console.log(movies)
+
 
   return (
-    <div className=" bgbanner bg-no-repeat bg-cover bg-center "> 
-      <div className="h-[450px] absolute  w-full bg-gradient-to-t from-red-500  via-transparent to-transparent " />
-      <div className=" h-[450px]  relative text-white object-contain max-w-[100rem] mx-auto">
-        <div className=" text-left pt-[140px] h-[190px] py-6 px-6">
+    <div style={{
+    backgroundImage: ` url('${base_url+movies?.backdrop_path}') `
+    }} className=" bg-no-repeat bg-cover bg-center">
+      <div className="h-[500px] absolute  w-full bg-gradient-to-t from-black via-transparent to-transparent " />
+      <div className=" h-[500px]  relative text-white object-contain max-w-[100rem] mx-auto">
+        <div className=" text-left pt-[140px] h-[190px]">
           <h1 className=" text-6xl  pb-2 font-black font-serif">
-            Stranger Things
+            {movies?.name}
           </h1>
-          <p>Lorejbhjvghjbknljnhbgcfghgvbhjnjklnhgbjfhxv cvb,</p>
+          <p>{truncate(movies?.overview , 150)
+}</p>
           <div className=" flex space-x-3 mt-4">
             <button className=" bg-white text-gray-700 px-6 py-1 font-bold">
               Play
