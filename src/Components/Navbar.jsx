@@ -19,7 +19,8 @@ function Navbar() {
 
 
   return (
-    <div className={` ${show ? "fixed":"relative"} w-full z-50 bg-black`}>
+    // <div className={` ${show ? "fixed":"relative"} w-full z-50 bg-black`}>
+    <div className={` ${show ? " bg-black ":" bg-gradient-to-r from-black to-black via-transparent"} fixed w-full z-50 `}>
     <div className=' max-w-[100rem] mx-auto flex justify-between py-4 px-6 items-center'>
         <div className=' text-red-500 font-bold text-4xl '>
             NETFLIX
