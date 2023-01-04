@@ -25,7 +25,7 @@ function Navbar() {
         <div className=' text-red-500 font-bold text-4xl '>
             NETFLIX
         </div>
-        <div className=' flex text-white'>
+        <div className=' flex text-white cursor-pointer'>
             <p>Movies</p>
 
         </div>
