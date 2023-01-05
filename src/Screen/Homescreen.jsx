@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import Banner from '../Components/Banner';
 import Navbar from '../Components/Navbar';
 import Row from '../Components/Row';
-// import axios from 'axios';
+import axios from 'axios';
 import requests from '../Requests';
 
 function Homescreen() {
@@ -19,6 +19,15 @@ function Homescreen() {
   //   console.log(error);
   // })
   // },[])
+
+  useEffect(()=>{
+    async function ft(){
+      await axios.get("/movie/297762/videos?api_key=a93b322b42e053f2037296980a90a436&language=en-US")
+      .then(res=>console.log(res)).catch(er => console.log(er))
+    }
+
+    ft() ;
+  },[])
   
 
   return (
@@ -26,7 +35,7 @@ function Homescreen() {
         <Navbar />
         <Banner />
         <div className=' max-w-[100rem] mx-auto px-6 py-12'>
-        <Row title={"Netflix Orignals"} fetchUrl={requests.fetchNetflixOriginals}   />
+        <Row title={"Netflix Orignals"} fetchUrl={requests.fetchNetflixOriginals}  isLargeRow={true}  />
         <Row title={"Trending"} fetchUrl={requests.fetchTrending}  />
         <Row title={"Top Rated"} fetchUrl={requests.fetchTopRated} />
         <Row title={"Action"} fetchUrl={requests.fetchActionMovies} />
