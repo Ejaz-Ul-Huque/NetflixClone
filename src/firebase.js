@@ -5,17 +5,13 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDiOohq1brTkdMjTplL29WDagewaXyhCJE",
-  authDomain: "whatsappclone-3c262.firebaseapp.com",
-  projectId: "whatsappclone-3c262",
-  storageBucket: "whatsappclone-3c262.appspot.com",
-  messagingSenderId: "102085774649",
-  appId: "1:102085774649:web:8a94efcb6e30ae663aace8"
+  apiKey: "AIzaSyDFSJIhvB2U3EJZBldz1rj5h2TF0OVg-kA",
+  authDomain: "netflix-3c53b.firebaseapp.com",
+  projectId: "netflix-3c53b",
+  storageBucket: "netflix-3c53b.appspot.com",
+  messagingSenderId: "1014759287278",
+  appId: "1:1014759287278:web:f9d6c2e765dca981ad46ff"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// const analytics = getAnalytics(app);
-
-export default app;
