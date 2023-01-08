@@ -36,6 +36,7 @@ function Homescreen() {
         <Banner />
         <div className=' max-w-[100rem] mx-auto px-6 py-12'>
         <Row title={"Netflix Orignals"} fetchUrl={requests.fetchNetflixOriginals}  isLargeRow={true}  />
+        console.log({requests.fetchNetflixOriginals})
         <Row title={"Trending"} fetchUrl={requests.fetchTrending}  />
         <Row title={"Top Rated"} fetchUrl={requests.fetchTopRated} />
         <Row title={"Action"} fetchUrl={requests.fetchActionMovies} />
