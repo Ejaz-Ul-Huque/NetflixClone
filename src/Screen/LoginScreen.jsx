@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 function LoginScreen({Cred}) {
 
 
-  const [signup ,setSignUp] = useState(true) ;
+  const [signup ,setSignUp] = useState(null) ;
 
 
 
