@@ -45,7 +45,7 @@ function App() {
     <div className="App bg-black">
         <Routes>
           <Route path="/watch/:movieid/:auth" element={<WatchMovie />} />
-          <Route path="/" element={ user ? <Homescreen /> : <LoginScreen Cred={setCred} /> } />
+          <Route path="/" element={ user ? <Homescreen /> : <LoginScreen handle={{createUser ,loginUser}} Cred={cred} SCred={setCred} /> } />
           <Route path="/login" element={<LoginScreen Cred={setCred} />} />
         </Routes>
     </div>
