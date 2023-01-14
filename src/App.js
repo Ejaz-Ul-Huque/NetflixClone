@@ -44,6 +44,7 @@ function App() {
   return (
     <div className="App bg-black">
         <Routes>
+          <Route path="/watch/:movieid/:auth" element={<WatchMovie />} />
           <Route path="/" element={ user ? <Homescreen /> : <LoginScreen Cred={setCred} /> } />
           <Route path="/login" element={<LoginScreen Cred={setCred} />} />
         </Routes>
