@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Homescreen from "./Screen/Homescreen";
 import LoginScreen from "./Screen/LoginScreen";
+import WatchMovie from "./Screen/WatchMovie";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import app from './firebase'
 
